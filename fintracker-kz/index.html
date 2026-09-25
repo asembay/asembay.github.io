@@ -3,39 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SanaTenge KZ</title>
+  <meta name="description" content="SanaTenge KZ — личные финансы для Казахстана. Импорт PDF-выписок, ручные операции, аналитика и экспорт CSV. Данные остаются на вашем устройстве.">
+  <meta name="theme-color" content="#008f9e">
+  <title>SanaTenge KZ — ваши финансы в ваших руках</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --bg:#f5f7f2; --panel:#fffffd; --ink:#142027; --muted:#52646d; --line:#dbe6e5; --teal:#008f9e; --blue:#1f57b8; --mint:#21a36b; --soft:#e7f4f1; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 88% 0%, #dcefea 0, transparent 32rem),var(--bg); line-height:1.6; }
+    a { color:var(--blue); text-underline-offset:3px; }
+    a:hover { color:var(--teal); }
+    .wrap { width:min(100% - 36px, 1080px); margin-inline:auto; }
+    .site-header { border-bottom:1px solid var(--line); background:color-mix(in srgb,var(--panel) 91%,transparent); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding-block:16px; }
+    .brand { display:inline-flex; align-items:center; gap:11px; color:var(--ink); text-decoration:none; font-weight:800; letter-spacing:-.035em; font-size:1.16rem; }
+    .brand-mark { display:grid; place-items:center; width:38px; height:38px; border-radius:11px; color:white; background:linear-gradient(135deg,var(--teal),var(--blue) 65%,var(--mint)); font-size:1.35rem; }
+    nav { display:flex; flex-wrap:wrap; gap:7px; }
+    nav a { border-radius:999px; padding:7px 11px; color:var(--muted); text-decoration:none; font-size:.88rem; font-weight:600; }
+    nav a:hover, nav a[aria-current="page"] { color:var(--teal); background:var(--soft); }
+    main { padding-block:30px 68px; }
+    .hero { position:relative; overflow:hidden; padding:clamp(30px,6vw,66px); border-radius:28px; color:white; background:linear-gradient(118deg,#008f9e 0%,#1f57b8 58%,#21a36b 120%); box-shadow:0 24px 46px #0a6f8740; }
+    .hero::after { content:""; position:absolute; width:330px; height:330px; right:-90px; top:-125px; border:44px solid #ffffff14; border-radius:50%; pointer-events:none; }
+    .eyebrow { margin:0 0 13px; font-size:.75rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+    h1 { max-width:730px; margin:0; font-size:clamp(2.35rem,7vw,4.7rem); line-height:1.08; letter-spacing:-.055em; }
+    .hero .lead { max-width:650px; margin:22px 0 0; color:#eefbff; font-size:clamp(1rem,2vw,1.24rem); }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff70; background:#ffffff1d; border-radius:999px; padding:7px 12px; font-size:.87rem; font-weight:650; }
+    .section { margin-top:52px; }
+    .section-title { max-width:720px; margin:0 0 20px; font-size:clamp(1.65rem,3vw,2.35rem); line-height:1.2; letter-spacing:-.035em; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .card { padding:23px; border:1px solid var(--line); border-radius:19px; background:var(--panel); box-shadow:0 8px 22px #1b38400a; }
+    .card h3 { margin:12px 0 6px; font-size:1.04rem; line-height:1.3; }
+    .card p { margin:0; color:var(--muted); font-size:.95rem; }
+    .icon { display:grid; place-items:center; width:39px; height:39px; border-radius:11px; color:var(--teal); background:var(--soft); font-size:1.18rem; font-weight:800; }
+    .notice { display:grid; grid-template-columns:1.5fr 1fr; gap:26px; align-items:center; padding:26px; border:1px solid #b8ded7; border-radius:20px; background:linear-gradient(120deg,#e6f5f0,#edf3fc); }
+    .notice h2 { margin:0 0 8px; font-size:1.3rem; }
+    .notice p { margin:0; color:#314b53; }
+    .notice strong { color:#0a676f; }
+    .changes { padding:24px 28px; border:1px solid var(--line); border-radius:20px; background:var(--panel); }
+    .changes ul { margin:0; padding-left:1.2rem; }
+    .changes li + li { margin-top:8px; }
+    .language { margin-top:64px; padding-top:45px; border-top:1px solid var(--line); }
+    .language .lead { max-width:760px; color:var(--muted); font-size:1.08rem; }
+    .links { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:24px; }
+    footer { border-top:1px solid var(--line); padding:22px 0 36px; color:var(--muted); font-size:.88rem; }
+    @media (max-width:760px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .notice { grid-template-columns:1fr; } }
+    @media (max-width:520px) { .wrap { width:min(100% - 28px,1080px); } .header-inner { align-items:flex-start; } nav { gap:2px; } nav a { padding:6px 8px; font-size:.78rem; } .hero { border-radius:21px; } .grid { grid-template-columns:1fr; } .section { margin-top:42px; } }
+    @media (prefers-color-scheme:dark) { :root { --bg:#101b20; --panel:#18292e; --ink:#f1f8f7; --muted:#b5c9ca; --line:#365056; --soft:#1b3b40; } body { background:radial-gradient(circle at 88% 0%,#123d40 0,transparent 32rem),var(--bg); } .notice { border-color:#275f62; background:linear-gradient(120deg,#163d3e,#1b3045); } .notice p { color:#ccddde; } .notice strong { color:#7ee1d1; } }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>SanaTenge KZ</h1>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="SanaTenge KZ — главная"><span class="brand-mark" aria-hidden="true">₸</span><span>SanaTenge KZ</span></a>
+      <nav aria-label="Навигация / Navigation">
+        <a href="index.html" aria-current="page">Главная / Home</a>
+        <a href="privacy-policy.html">Конфиденциальность / Privacy</a>
+        <a href="support.html">Поддержка / Support</a>
+        <a href="terms.html">Условия / Terms</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="ru" lang="ru" aria-labelledby="ru-title">
+      <div class="hero">
+        <p class="eyebrow">Личные финансы для Казахстана</p>
+        <h1 id="ru-title">Ваши финансы.<br>В ваших руках.</h1>
+        <p class="lead">SanaTenge KZ помогает видеть доходы и расходы, проверять банковские выписки и понимать привычки трат — без передачи финансовых данных на наши серверы.</p>
+        <div class="hero-meta"><span>PDF-выписки</span><span>Ручные операции</span><span>Аналитика</span><span>Данные на устройстве</span></div>
+      </div>
 
-    <p>
-      SanaTenge KZ — персональный финансовый менеджер для Казахстана.
-      Приложение помогает контролировать доходы, расходы и банковские выписки в одном месте.
-    </p>
+      <div class="section">
+        <h2 class="section-title">Всё важное — в одном месте</h2>
+        <div class="grid">
+          <article class="card"><span class="icon" aria-hidden="true">↧</span><h3>Импорт выписок</h3><p>PDF-выписки Kaspi.kz, Halyk и Freedom Bank. Просматривайте извлечённые операции и итоги перед сохранением.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">✎</span><h3>Ручные записи</h3><p>Добавляйте расходы и доходы, а затем исправляйте сумму, дату, категорию или способ оплаты.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">✓</span><h3>Контроль совпадений</h3><p>Если запись совпадает с импортируемой операцией, решите сами: заменить её или сохранить обе.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">▥</span><h3>Понятная аналитика</h3><p>Категории, динамика расходов, регулярные платежи и сигналы о необычных операциях.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">⇥</span><h3>Экспорт CSV</h3><p>Выгружайте свои операции, включая добавленные вручную, в файл для дальнейшей работы.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">₸</span><h3>Полезные инструменты</h3><p>Курсы валют, кредитный калькулятор, категории и защита доступа PIN-кодом.</p></article>
+        </div>
+      </div>
 
-    <h2>Возможности</h2>
-    <ul>
-      <li>Загрузка банковских выписок в PDF</li>
-      <li>Автоматическое извлечение операций</li>
-      <li>Проверка импорта и обнаружение дублей</li>
-      <li>Категории доходов и расходов</li>
-      <li>Аналитика по месяцам</li>
-      <li>Экспорт операций в CSV</li>
-      <li>Курсы валют</li>
-      <li>Кредитный калькулятор</li>
-      <li>PIN-код для защиты доступа</li>
-      <li>Русский, казахский и английский языки</li>
-    </ul>
+      <div class="section notice">
+        <div><h2>Ваши данные остаются вашими</h2><p>Выписки и операции обрабатываются и хранятся локально на iPhone или iPad. Учётная запись не нужна. Для отображения курсов приложение обращается к публичным источникам, не отправляя им ваши финансовые записи.</p></div>
+        <strong>Три языка приложения:<br>русский · қазақша · English</strong>
+      </div>
 
-    <p>
-      Все финансовые данные обрабатываются и хранятся только локально на вашем iPhone.
-    </p>
+      <div class="section changes">
+        <h2 class="section-title">Что нового в этой версии</h2>
+        <ul>
+          <li>Редактирование операций, добавленных вручную.</li>
+          <li>Выбор действия при совпадении ручной записи с операцией из PDF-выписки; при замене сохраняется выбранная категория.</li>
+          <li>Экспорт CSV теперь включает ручные операции, доступен без загруженной выписки и использует язык приложения в заголовках.</li>
+          <li>Для новой ручной операции наличные можно выбрать отдельно; по умолчанию запись безналичная.</li>
+          <li>Убран расчёт доступной суммы на день, основанный на неполных данных.</li>
+        </ul>
+      </div>
+      <p class="links"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="support.html">Поддержка</a><a href="terms.html">Условия использования</a></p>
+    </section>
 
-    <p>
-      <a href="privacy-policy.html">Политика конфиденциальности</a><br>
-      <a href="support.html">Поддержка</a>
-    </p>
+    <section id="en" lang="en" class="language" aria-labelledby="en-title">
+      <p class="eyebrow" style="color:var(--teal)">Personal finance for Kazakhstan</p>
+      <h2 id="en-title" class="section-title">Your money, in your hands.</h2>
+      <p class="lead">SanaTenge KZ brings income, spending, bank statements, and useful insights together. Your financial records stay on your device.</p>
+      <div class="grid">
+        <article class="card"><h3>Review PDF statements</h3><p>Import supported statements from Kaspi.kz, Halyk, and Freedom Bank and review extracted transactions before saving.</p></article>
+        <article class="card"><h3>Record and edit transactions</h3><p>Add income or expenses manually and update the amount, date, category, or cash status later.</p></article>
+        <article class="card"><h3>Keep control of matches</h3><p>Choose whether a matching manual entry should be replaced by a statement transaction or kept alongside it.</p></article>
+        <article class="card"><h3>See useful insights</h3><p>Explore categories, spending trends, recurring payments, and unusual transactions.</p></article>
+        <article class="card"><h3>Export your data</h3><p>Create a CSV of your transactions, including manual entries, whenever you need it.</p></article>
+        <article class="card"><h3>Everyday tools</h3><p>View exchange rates, estimate loan payments, organize categories, and protect access with a PIN.</p></article>
+      </div>
+      <div class="section changes"><h2 class="section-title">What's new in this version</h2><ul><li>Edit manually added transactions.</li><li>Review matches between manual entries and imported PDF transactions, with a choice to replace or keep both. Replacing preserves your category.</li><li>Export all transactions to CSV, including manual entries even when no statement has been imported, with headers in the app's language.</li><li>New manual entries default to non-cash; cash can be selected explicitly.</li><li>The estimated daily spending amount has been removed because it could rely on incomplete data.</li></ul></div>
+      <p class="links"><a href="privacy-policy.html#en">Privacy Policy</a><a href="support.html#en">Support</a><a href="terms.html#en">Terms of Use</a></p>
+    </section>
   </main>
+  <footer><div class="wrap">© 2026 SanaTenge KZ · <a href="support.html">Contact / Связаться</a></div></footer>
 </body>
 </html>
