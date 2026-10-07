@@ -144,3 +144,61 @@ li + li { margin-top: 8px; }
   h2 { break-after: avoid; }
   .document-section { break-inside: avoid; }
 }
+
+/* Approved app-icon palette. Text remains selectable and readable by VoiceOver. */
+body { background-image: linear-gradient(180deg, #ffffff24, #fff5d4d9 960px), url('mill-background.png'); }
+.wordmark { display: inline-flex; flex-direction: column; align-items: center; font-family: 'Arial Rounded MT Bold', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif; font-synthesis: weight; font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
+.wordmark-name, .wordmark-kids {
+  position: relative;
+  isolation: isolate;
+  color: transparent;
+  filter: drop-shadow(0 4px 0 #380855);
+}
+.wordmark-name::before, .wordmark-kids::before {
+  content: attr(data-lettering); position: absolute; inset: 0; z-index: 0;
+  color: #671398; -webkit-text-stroke: 6px #671398;
+}
+.wordmark-name::after, .wordmark-kids::after {
+  content: attr(data-lettering); position: absolute; inset: 0; z-index: 1; color: #ffd450;
+}
+.wordmark-name { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+.wordmark-kids { font-size: 1.15rem; letter-spacing: .01em; margin-top: 3px; }
+.wordmark-kids::before { -webkit-text-stroke-width: 3.6px; }
+@supports (-webkit-background-clip: text) {
+  .wordmark-name::after, .wordmark-kids::after {
+    background: linear-gradient(180deg, #ffffdc 4%, #ffe04e 45%, #ffa116 96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.brand { gap: 18px; text-shadow: none; }
+.brand > span { text-align: center; }
+.brand small { margin-top: 12px; color: #3a254e; }
+.brand-icon { flex: 0 0 80px; width: 80px; height: 80px; object-fit: cover; border-radius: 22px; border: 3px solid #fff9de; box-shadow: 0 5px 0 #582c7955; }
+h1 { font-family: -apple-system, BlinkMacSystemFont, 'Arial Rounded MT Bold', sans-serif; font-weight: 900; color: #ffc83f; -webkit-text-stroke: 2px #671398; paint-order: stroke fill; filter: drop-shadow(0 3px 0 #380855); padding-bottom: 5px; }
+.hero h1 { font-size: clamp(2.3rem, 4.2vw, 3.6rem); line-height: 1.14; }
+.hero-art { min-height: 0; }
+.hero-illustration { display: block; width: 100%; height: auto; border-radius: 30px; border: 4px solid #fff9de; box-shadow: 0 8px 0 #582c7929, 0 16px 30px #35205521; }
+.site-footer .wordmark { align-items: flex-start; }
+.site-footer .wordmark-name { font-size: 1.65rem; }
+.site-footer .wordmark-name::before { -webkit-text-stroke-width: 4px; }
+.site-footer .wordmark-kids { font-size: .85rem; }
+.site-footer .wordmark-kids::before { -webkit-text-stroke-width: 2.4px; }
+@media (max-width: 700px) {
+  .site-header { align-items: center; }
+  .language-switch { align-self: center; }
+  .hero-art { width: min(100%, 350px); min-height: 0; }
+  .hero-illustration { border-radius: 26px; }
+  .brand-icon { flex-basis: 64px; width: 64px; height: 64px; border-radius: 18px; }
+  .brand { gap: 12px; }
+  .wordmark-name { font-size: clamp(2rem, 8.8vw, 3.2rem); }
+}
+@media (max-width: 380px) {
+  .brand-icon { flex-basis: 52px; width: 52px; height: 52px; border-radius: 16px; }
+  .brand { gap: 10px; }
+  .wordmark-name { font-size: 2rem; }
+}
+@media print {
+  h1 { color: #000; background: none; -webkit-text-stroke: 0; filter: none; }
+}
