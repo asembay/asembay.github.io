@@ -1,0 +1,38 @@
+{
+  "ru": {
+    "title": "7. Подписка и пробный период",
+    "terms": [
+      "Таблицы на 0 и 1 доступны бесплатно. Для таблиц на 2–12 и всех финалов требуется действующий пробный период или месячная подписка. Учебный порядок открытия островов сохраняется.",
+      "Для пользователей, которым Apple разрешает вводное предложение, предусмотрены 7 дней бесплатно после подтверждения подписки через App Store. Затем подписка автоматически продлевается с оплатой за месяц, если её не отменить. Базовая цена в США — 3,99 USD в месяц; актуальная цена, валюта и условия вашего региона показаны в приложении и системном окне Apple перед оформлением.",
+      "Оплата проводится через Apple Account. Управлять подпиской и отменять автопродление можно в настройках Apple Account или через родительский раздел приложения. Чтобы избежать следующего списания, отмените подписку не позднее чем за 24 часа до окончания текущего периода. Отмена автопродления не закрывает доступ до фактического окончания действующего периода.",
+      "После окончания доступа без продления остаются таблицы на 0 и 1. Монеты, результаты, награды и контрольные точки сохраняются на устройстве; после возобновления подписки можно продолжить игру. Восстановление покупок возвращает доступ для соответствующего Apple Account, но само по себе не переносит локальный игровой прогресс между устройствами. Возвраты оплаты обрабатывает Apple по своим правилам."
+    ],
+    "privacy": "Покупки и подписки обрабатываются Apple через StoreKit. Приложение проверяет подписанные сведения о покупке, продукте и сроке доступа на устройстве. Разработчик не получает реквизиты банковской карты или пароль Apple Account; приложение не отправляет сведения о покупках на сервер разработчика.",
+    "question": "Как работают подписка и бесплатные туры?",
+    "answer": "Таблицы на 0 и 1 бесплатны. Остальные таблицы и финалы требуют активного доступа. Для подходящих пользователей Apple предлагает 7 дней бесплатно, затем месячную подписку. Оформление, восстановление и управление доступны взрослому в родительском разделе. При окончании подписки прогресс и монеты сохраняются."
+  },
+  "en": {
+    "title": "7. Subscription and free trial",
+    "terms": [
+      "Tables 0 and 1 are free. Tables 2–12 and all finals require an active trial or monthly subscription. The learning sequence for unlocking islands remains unchanged.",
+      "Eligible users receive 7 days free after confirming the subscription through the App Store. The subscription then automatically renews with monthly billing unless canceled. The US base price is USD 3.99 per month; your region’s actual price, currency, and terms appear in the app and Apple’s purchase sheet before subscribing.",
+      "Payment is through your Apple Account. Manage the subscription or cancel renewal in Apple Account settings or through the app’s parent area. Cancel at least 24 hours before the current period ends to avoid the next charge. Turning off renewal does not end access before the active period expires.",
+      "When access expires without renewal, tables 0 and 1 remain available. Coins, results, rewards, and checkpoints stay on the device, and play can continue after resubscribing. Restoring purchases restores access for the relevant Apple Account but does not itself transfer local game progress between devices. Apple handles refunds under its policies."
+    ],
+    "privacy": "Apple processes purchases and subscriptions through StoreKit. The app verifies signed purchase, product, and access-expiration information on the device. The developer does not receive card details or your Apple Account password, and the app does not send purchase information to a developer server.",
+    "question": "How do subscriptions and free rounds work?",
+    "answer": "Tables 0 and 1 are free. The remaining tables and finals require active access. Apple offers eligible users 7 days free, followed by a monthly subscription. Adults can subscribe, restore purchases, and manage the subscription in the parent area. Progress and coins remain when a subscription ends."
+  },
+  "kk": {
+    "title": "7. Жазылым және тегін сынақ мерзімі",
+    "terms": [
+      "0 және 1 кестелері тегін. 2–12 кестелері мен барлық финалдарға белсенді сынақ мерзімі немесе айлық жазылым қажет. Аралдарды ашудың оқу реті сақталады.",
+      "Apple бастапқы ұсынысты пайдалануға рұқсат берген пайдаланушылар App Store арқылы жазылымды растағаннан кейін 7 күн тегін ойнайды. Одан кейін жазылым тоқтатылмаса, ай сайын төлем алынып, автоматты түрде жаңартылады. АҚШ-тағы негізгі баға — айына 3,99 USD; аймағыңыздағы нақты баға, валюта және шарттар жазылым алдында қолданбада және Apple сатып алу терезесінде көрсетіледі.",
+      "Төлем Apple Account арқылы жүргізіледі. Жазылымды басқаруға және автоматты жаңартуды өшіруге Apple Account баптаулары немесе қолданбаның ата-ана бөлімі арқылы болады. Келесі төлем алынбауы үшін жазылымды ағымдағы мерзім аяқталғанға дейін кемінде 24 сағат бұрын тоқтатыңыз. Автоматты жаңартуды өшіру белсенді мерзім аяқталмай тұрып қолжетімділікті жаппайды.",
+      "Қолжетімділік жаңартусыз аяқталса, 0 және 1 кестелері қолжетімді болып қалады. Монеталар, нәтижелер, сыйлықтар және бақылау нүктелері құрылғыда сақталады; жазылымды қайта бастағаннан кейін ойынды жалғастыруға болады. Сатып алуларды қалпына келтіру тиісті Apple Account үшін қолжетімділікті қайтарады, бірақ жергілікті ойын прогресін құрылғылар арасында көшірмейді. Ақшаны қайтаруды Apple өз ережелері бойынша өңдейді."
+    ],
+    "privacy": "Сатып алулар мен жазылымдарды Apple StoreKit арқылы өңдейді. Қолданба құрылғыда сатып алу, өнім және қолжетімділік мерзімі туралы қол қойылған мәліметтерді тексереді. Әзірлеуші банк картасының деректерін немесе Apple Account құпиясөзін алмайды; қолданба сатып алу мәліметтерін әзірлеушінің серверіне жібермейді.",
+    "question": "Жазылым мен тегін турлар қалай жұмыс істейді?",
+    "answer": "0 және 1 кестелері тегін. Қалған кестелер мен финалдарға белсенді қолжетімділік қажет. Apple сәйкес пайдаланушыларға 7 күн тегін сынақтан кейін айлық жазылым ұсынады. Ересектер жазылымды ата-ана бөлімінде рәсімдеп, басқарып, сатып алуларды қалпына келтіре алады. Жазылым аяқталса, прогресс пен монеталар сақталады."
+  }
+}
