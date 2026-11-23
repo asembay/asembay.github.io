@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SanaTenge KZ — личные финансы для Казахстана. Импорт PDF-выписок, ручные операции, аналитика и экспорт CSV. Данные остаются на вашем устройстве.">
+  <meta name="description" content="SanaTenge KZ — личные финансы для Казахстана. Импорт PDF-выписок, ручные операции, аналитика и экспорт CSV.">
   <meta name="theme-color" content="#008f9e">
   <title>SanaTenge KZ — ваши финансы в ваших руках</title>
   <style>
@@ -22,6 +22,7 @@
     nav a { border-radius:999px; padding:7px 11px; color:var(--muted); text-decoration:none; font-size:.88rem; font-weight:600; }
     nav a:hover, nav a[aria-current="page"] { color:var(--teal); background:var(--soft); }
     main { padding-block:30px 68px; }
+    main > nav { margin-bottom:16px; }
     .hero { position:relative; overflow:hidden; padding:clamp(30px,6vw,66px); border-radius:28px; color:white; background:linear-gradient(118deg,#008f9e 0%,#1f57b8 58%,#21a36b 120%); box-shadow:0 24px 46px #0a6f8740; }
     .hero::after { content:""; position:absolute; width:330px; height:330px; right:-90px; top:-125px; border:44px solid #ffffff14; border-radius:50%; pointer-events:none; }
     .eyebrow { margin:0 0 13px; font-size:.75rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
@@ -65,6 +66,11 @@
     </div>
   </header>
   <main class="wrap">
+    <nav aria-label="Тіл / Язык / Language">
+      <a href="#kk" lang="kk">Қазақша</a>
+      <a href="#ru" lang="ru">Русский</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
     <section id="ru" lang="ru" aria-labelledby="ru-title">
       <div class="hero">
         <p class="eyebrow">Личные финансы для Казахстана</p>
@@ -76,7 +82,7 @@
       <div class="section">
         <h2 class="section-title">Всё важное — в одном месте</h2>
         <div class="grid">
-          <article class="card"><span class="icon" aria-hidden="true">↧</span><h3>Импорт выписок</h3><p>PDF-выписки Kaspi.kz, Halyk и Freedom Bank. Просматривайте извлечённые операции и итоги перед сохранением.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">↧</span><h3>Импорт выписок</h3><p>PDF-выписки Каспи (Kaspi Gold), Халыка и Фридом Банка, а также выписки Kaspi Pay и Евразийского банка в тенге. Перед сохранением можно проверить операции и итоги.</p></article>
           <article class="card"><span class="icon" aria-hidden="true">✎</span><h3>Ручные записи</h3><p>Добавляйте расходы и доходы, а затем исправляйте сумму, дату, категорию или способ оплаты.</p></article>
           <article class="card"><span class="icon" aria-hidden="true">✓</span><h3>Контроль совпадений</h3><p>Если запись совпадает с импортируемой операцией, решите сами: заменить её или сохранить обе.</p></article>
           <article class="card"><span class="icon" aria-hidden="true">▥</span><h3>Понятная аналитика</h3><p>Категории, динамика расходов, регулярные платежи и сигналы о необычных операциях.</p></article>
@@ -86,18 +92,37 @@
       </div>
 
       <div class="section notice">
-        <div><h2>Ваши данные остаются вашими</h2><p>Выписки и операции обрабатываются и хранятся локально на iPhone или iPad. Учётная запись не нужна. Для отображения курсов приложение обращается к публичным источникам, не отправляя им ваши финансовые записи.</p></div>
+        <div><h2>Ваши данные остаются вашими</h2><p>Выписки и операции обрабатываются и хранятся на iPhone или iPad. Приложение работает без учётной записи. Автоматические копии в личный iCloud можно включить отдельно. Для отображения курсов приложение обращается к публичным источникам, не отправляя им ваши финансовые записи.</p></div>
         <strong>Три языка приложения:<br>русский · қазақша · English</strong>
       </div>
 
       <div class="section changes">
-        <h2 class="section-title">Что нового в этой версии</h2>
+        <h2 class="section-title">Что нового — 1.0.13 (сборка 1)</h2>
+        <ul>
+          <li>Добавили импорт PDF-выписок Евразийского банка в тенге.</li>
+          <li>В русской версии названия поддерживаемых банков отображаются кириллицей.</li>
+          <li>В настройках можно создать зашифрованную резервную копию и восстановить из неё финансовую историю. При восстановлении нужно задать новый PIN. <a href="support.html#backups-ru">Как пользоваться резервными копиями</a></li>
+        </ul>
+      </div>
+
+      <div class="section changes">
+        <h2 class="section-title">Что нового — 1.0.11 (сборка 10)</h2>
         <ul>
           <li>Редактирование операций, добавленных вручную.</li>
+          <li>После импорта выписок разных банков можно проверить возможные переводы между своими счетами. Только суммы подтверждённых переводов исключаются из личной аналитики доходов и расходов; обе операции остаются в истории и CSV. Можно отклонить совпадение, отменить связь или пересмотреть отказ.</li>
+          <li>Исходящие переводы без подтверждённой внутренней связи учитываются в расходах, чтобы переводы другим людям не исчезали из аналитики.</li>
           <li>Выбор действия при совпадении ручной записи с операцией из PDF-выписки; при замене сохраняется выбранная категория.</li>
           <li>Экспорт CSV теперь включает ручные операции, доступен без загруженной выписки и использует язык приложения в заголовках.</li>
-          <li>Для новой ручной операции наличные можно выбрать отдельно; по умолчанию запись безналичная.</li>
-          <li>Убран расчёт доступной суммы на день, основанный на неполных данных.</li>
+          <li>Для новой ручной операции наличные можно выбрать отдельно; по умолчанию запись безналичная. Импортированные операции защищены от удаления как ручные.</li>
+          <li>Убран расчёт доступной суммы на день. Регулярные платежи и темп расходов обновляются при возвращении в приложение.</li>
+          <li>Обновлено оформление главной страницы, операций и аналитики: более ясная иерархия показателей, единый стиль карточек и удобочитаемые фильтры.</li>
+          <li>С главной страницы убрана общая сумма всех операций. У кнопки загрузки выписки улучшены пропорции, значок и текст отцентрированы.</li>
+          <li>В настройках убраны группировки «Деньги», «Данные» и «Приложение»; все пункты и функции сохранены.</li>
+          <li>Улучшили поиск переводов между банками: нулевая комиссия Freedom и встроенная комиссия Halyk больше не мешают сопоставлению. После подтверждения связи основная сумма исключается из аналитики, а комиссия остаётся расходом.</li>
+          <li>Для нескольких переводов с одинаковой датой и суммой показываются варианты связи с указанием страницы и строки выписки. Вы выбираете связь вручную; каждую операцию можно связать только один раз.</li>
+          <li>В разделе загруженных выписок добавили кнопку удаления всех выписок с системным подтверждением. Ручные операции и настройки сохраняются. Добавили подсказку об удалении одной выписки нажатием или свайпом влево.</li>
+          <li>Вынесли оценку и отзыв в отдельный пункт настроек и добавили возможность поделиться ссылкой на приложение.</li>
+          <li>Убрали общую сумму операций из экрана проверки новой выписки перед импортом.</li>
         </ul>
       </div>
       <p class="links"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="support.html">Поддержка</a><a href="terms.html">Условия использования</a></p>
@@ -106,17 +131,92 @@
     <section id="en" lang="en" class="language" aria-labelledby="en-title">
       <p class="eyebrow" style="color:var(--teal)">Personal finance for Kazakhstan</p>
       <h2 id="en-title" class="section-title">Your money, in your hands.</h2>
-      <p class="lead">SanaTenge KZ brings income, spending, bank statements, and useful insights together. Your financial records stay on your device.</p>
+      <p class="lead">SanaTenge KZ brings income, spending, bank statements, and useful insights together. The app processes and stores your data on your device. Automatic backups to your private iCloud storage are optional.</p>
       <div class="grid">
-        <article class="card"><h3>Review PDF statements</h3><p>Import supported statements from Kaspi.kz, Halyk, and Freedom Bank and review extracted transactions before saving.</p></article>
+        <article class="card"><h3>Review PDF statements</h3><p>Import supported PDF statements from Kaspi Gold, Halyk, and Freedom Bank, plus KZT statements from Kaspi Pay and Eurasian Bank. Review transactions and totals before saving.</p></article>
         <article class="card"><h3>Record and edit transactions</h3><p>Add income or expenses manually and update the amount, date, category, or cash status later.</p></article>
         <article class="card"><h3>Keep control of matches</h3><p>Choose whether a matching manual entry should be replaced by a statement transaction or kept alongside it.</p></article>
         <article class="card"><h3>See useful insights</h3><p>Explore categories, spending trends, recurring payments, and unusual transactions.</p></article>
         <article class="card"><h3>Export your data</h3><p>Create a CSV of your transactions, including manual entries, whenever you need it.</p></article>
         <article class="card"><h3>Everyday tools</h3><p>View exchange rates, estimate loan payments, organize categories, and protect access with a PIN.</p></article>
       </div>
-      <div class="section changes"><h2 class="section-title">What's new in this version</h2><ul><li>Edit manually added transactions.</li><li>Review matches between manual entries and imported PDF transactions, with a choice to replace or keep both. Replacing preserves your category.</li><li>Export all transactions to CSV, including manual entries even when no statement has been imported, with headers in the app's language.</li><li>New manual entries default to non-cash; cash can be selected explicitly.</li><li>The estimated daily spending amount has been removed because it could rely on incomplete data.</li></ul></div>
+      <div class="section changes">
+        <h2 class="section-title">What's new — 1.0.13 (build 1)</h2>
+        <ul>
+          <li>Added support for importing Eurasian Bank PDF statements in KZT.</li>
+          <li>Supported bank names now appear in Cyrillic in the Russian interface.</li>
+          <li>Create an encrypted backup and restore your financial history from Settings. Set a new app PIN when restoring. <a href="support.html#backups-en">How to use backups</a></li>
+        </ul>
+      </div>
+      <div class="section changes">
+        <h2 class="section-title">What's new — 1.0.11 (build 10)</h2>
+        <ul>
+          <li>Edit manually added transactions.</li>
+          <li>After importing statements from different banks, review possible transfers between your accounts. Only confirmed transfer amounts are excluded from personal income and expense analytics; both transactions remain in history and CSV exports. You can dismiss a match, unlink a pair, or reconsider a dismissed match.</li>
+          <li>Outgoing transfers without a confirmed internal link are included in expenses, so transfers to other people remain visible in analytics.</li>
+          <li>Review matches between manual entries and imported PDF transactions, with a choice to replace or keep both. Replacing preserves your category.</li>
+          <li>Export all transactions to CSV, including manual entries even when no statement has been imported, with headers in the app's language.</li>
+          <li>New manual entries default to non-cash; cash can be selected explicitly. Imported transactions can no longer be deleted as manual entries.</li>
+          <li>The estimated daily spending amount has been removed. Recurring payments and spending pace refresh when you return to the app.</li>
+          <li>Refreshed the Home, Transactions, and Insights screens with clearer metric hierarchy, consistent cards, and more readable filters.</li>
+          <li>Removed the combined transaction amount from Home and improved the statement import button's proportions, with a centered icon and label.</li>
+          <li>Simplified Settings by removing the Money, Data, and App group headings while keeping every option and feature.</li>
+          <li>Improved transfer matching across banks: zero-fee Freedom transfers and Halyk transfers with an embedded fee can now be matched. Confirmed transfer amounts are excluded from analytics while fees remain expenses.</li>
+          <li>When several transfers share the same date and amount, review possible links with the source statement page and row. You choose the link manually; each transaction can be linked only once.</li>
+          <li>Added a Delete All Statements button with a system confirmation dialog. Manual transactions and settings are preserved. Added a tip for deleting individual statements by tapping or swiping left.</li>
+          <li>Moved ratings and reviews to a dedicated Settings option and added an option to share the app link.</li>
+          <li>Removed the combined transaction amount from the review screen for newly imported statements.</li>
+        </ul>
+      </div>
       <p class="links"><a href="privacy-policy.html#en">Privacy Policy</a><a href="support.html#en">Support</a><a href="terms.html#en">Terms of Use</a></p>
+    </section>
+    <section id="kk" lang="kk" class="language" aria-labelledby="kk-title">
+      <p class="eyebrow" style="color:var(--teal)">Қазақстандағы жеке қаржы</p>
+      <h2 id="kk-title" class="section-title">Қаржыңыз өз қолыңызда.</h2>
+      <p class="lead">SanaTenge KZ кірістер мен шығыстарды бақылауға, банк көшірмелерін тексеруге және шығыс әдеттерін түсінуге көмектеседі. Қаржы деректері біздің серверлерге жіберілмейді.</p>
+      <div class="grid">
+        <article class="card"><h3>PDF көшірмелерін импорттау</h3><p>Kaspi Gold, Halyk және Freedom Bank PDF көшірмелеріне, сондай-ақ Kaspi Pay мен Еуразиялық банктің теңгедегі көшірмелеріне қолдау көрсетіледі. Сақтамас бұрын операциялар мен қорытынды сомаларды тексеріңіз.</p></article>
+        <article class="card"><h3>Операцияларды қолмен енгізу</h3><p>Кіріс пен шығысты қолмен қосып, кейін сомасын, күнін, санатын немесе төлем тәсілін өзгертіңіз.</p></article>
+        <article class="card"><h3>Сәйкестіктерді тексеру</h3><p>Қолмен енгізілген жазба көшірмедегі операциямен сәйкес келсе, оны ауыстыруға немесе екеуін де сақтауға болады.</p></article>
+        <article class="card"><h3>Түсінікті талдау</h3><p>Шығыстарды санаттар бойынша қарап, олардың өзгерісін, тұрақты төлемдерді және әдеттен тыс операцияларды бақылаңыз.</p></article>
+        <article class="card"><h3>CSV-ға экспорт</h3><p>Операцияларды, соның ішінде қолмен қосылған жазбаларды, әрі қарай пайдалану үшін CSV файлына экспорттаңыз.</p></article>
+        <article class="card"><h3>Күнделікті құралдар</h3><p>Валюта бағамдарын қараңыз, несие төлемдерін есептеңіз, санаттарды реттеңіз және қолданбаны PIN-кодпен қорғаңыз.</p></article>
+      </div>
+
+      <div class="section notice">
+        <div><h2>Деректеріңіз өз бақылауыңызда</h2><p>Банк көшірмелері мен операциялар iPhone немесе iPad құрылғысында өңделіп, сақталады. Қолданбаны пайдалану үшін тіркелгі қажет емес. Жеке iCloud қоймасына автоматты сақтық көшірме жасауды бөлек қосуға болады. Бағамдарды алу үшін қолданба ашық дереккөздерге жүгінеді және оларға қаржы жазбаларыңызды жібермейді.</p></div>
+        <strong>Қолданба үш тілде қолжетімді<br>қазақша · русский · English</strong>
+      </div>
+
+      <div class="section changes">
+        <h2 class="section-title">1.0.13 нұсқасындағы жаңалықтар (1-жинақ)</h2>
+        <ul>
+          <li>Еуразиялық банктің теңгедегі PDF көшірмелерін импорттау мүмкіндігі қосылды.</li>
+          <li>Қолдау көрсетілетін банктердің атауы орыс тіліндегі интерфейсте кирилл әріптерімен көрсетіледі.</li>
+          <li>Баптауларда шифрланған сақтық көшірме жасап, одан қаржы тарихын қалпына келтіру мүмкіндігі қосылды. <a href="support.html#backups-kk">Сақтық көшірмелерді пайдалану</a></li>
+        </ul>
+      </div>
+      <div class="section changes">
+        <h2 class="section-title">1.0.11 нұсқасындағы жаңалықтар (10-жинақ)</h2>
+        <ul>
+          <li>Қолмен қосылған операцияларды өңдеуге болады.</li>
+          <li>Әртүрлі банктердің көшірмелерін импорттаған соң, өз шоттарыңыз арасындағы ықтимал аударымдарды тексеруге болады. Тек расталған аударым сомалары кірістер мен шығыстар талдауынан алынады. Екі операция да тарихта және CSV файлында қалады. Сәйкестікті қабылдамауға, байланысты жоюға немесе бұрын қабылданбаған сәйкестікті қайта қарауға болады.</li>
+          <li>Өз шоттарыңыз арасындағы аударым екені расталмаған шығыс аударымдар талдауда шығыс ретінде есептеледі. Осылайша басқа адамдарға жіберілген аударымдар көрінеді.</li>
+          <li>Қолмен енгізілген жазба PDF көшірмесіндегі операциямен сәйкес келсе, оны ауыстыруға немесе екі жазбаны да сақтауға болады. Ауыстырғанда таңдалған санат сақталады.</li>
+          <li>CSV файлына қолмен қосылған операциялар да кіреді. Көшірме жүктелмесе де экспорттауға болады. Баған тақырыптары қолданба тілінде көрсетіледі.</li>
+          <li>Жаңа қолмен енгізілген жазба әдепкіде қолма-қол ақшасыз операция болып саналады. Қолма-қол төлемді бөлек таңдауға болады. Импортталған операцияны қолмен енгізілген жазба ретінде жою мүмкін емес.</li>
+          <li>Күн сайын жұмсауға болатын соманың есебі алынып тасталды. Қолданбаға оралғанда тұрақты төлемдер мен шығыс қарқыны жаңартылады.</li>
+          <li>Басты бет, операциялар және талдау экрандары жаңартылды. Көрсеткіштер реттелді, карточкалар біріздендірілді және сүзгілерді оқу оңайлады.</li>
+          <li>Басты беттен барлық операцияның жалпы сомасы алынып тасталды. Көшірмені жүктеу батырмасының өлшемі реттеліп, белгішесі мен мәтіні ортаға тураланды.</li>
+          <li>Баптаулардағы «Ақша», «Деректер» және «Қолданба» бөлім атаулары алынып тасталды. Барлық баптаулар мен мүмкіндіктер сақталды.</li>
+          <li>Банкаралық аударымдарды сәйкестендіру жақсарды. Freedom Bank-тің нөлдік комиссиясы мен Halyk сомасына кіретін комиссия сәйкестікке кедергі келтірмейді. Байланыс расталса, аударымның негізгі сомасы талдаудан алынып, комиссия шығыс ретінде қалады.</li>
+          <li>Күні мен сомасы бірдей бірнеше аударым болса, ықтимал сәйкестіктер көшірменің беті мен жолы көрсетіліп беріледі. Сәйкестікті өзіңіз таңдайсыз. Әр операцияны бір рет байланыстыруға болады.</li>
+          <li>Жүктелген көшірмелер бөлімінде барлық көшірмені жою батырмасы және жүйелік растау терезесі қосылды. Қолмен енгізілген операциялар мен баптаулар сақталады. Бір көшірмені басу немесе солға сырғыту арқылы жою туралы кеңес қосылды.</li>
+          <li>Баға беру мен пікір жазу баптауларда бөлек тармаққа шығарылды. Қолданба сілтемесімен бөлісу мүмкіндігі қосылды.</li>
+          <li>Жаңа көшірмені импорттау алдында тексеру экранынан операциялардың жалпы сомасы алынып тасталды.</li>
+        </ul>
+      </div>
+      <p class="links"><a href="privacy-policy.html#kk">Құпиялылық саясаты</a><a href="support.html#kk">Қолдау</a><a href="terms.html#kk">Пайдалану шарттары</a></p>
     </section>
   </main>
   <footer><div class="wrap">© 2026 SanaTenge KZ · <a href="support.html">Contact / Связаться</a></div></footer>

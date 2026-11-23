@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Поддержка SanaTenge KZ / SanaTenge KZ Support. Помощь с импортом PDF-выписок, операциями и экспортом CSV.">
+  <meta name="description" content="Поддержка SanaTenge KZ / SanaTenge KZ Support. Импорт PDF-выписок, операции и экспорт CSV.">
   <meta name="theme-color" content="#008f9e">
   <title>Поддержка — SanaTenge KZ</title>
   <style>
@@ -17,11 +17,17 @@
     .content { margin-top:20px; padding:clamp(23px,4vw,44px); border:1px solid var(--line); border-radius:22px; background:var(--panel); } .content h2 { margin:29px 0 7px; font-size:1.22rem; line-height:1.3; } .content h2:first-of-type { margin-top:20px; } .content p { margin:0 0 14px; color:var(--muted); } .content li { color:var(--muted); } .content ul { padding-left:1.3rem; } .email { display:inline-block; margin:8px 0 20px; padding:11px 16px; border-radius:11px; color:white; background:var(--teal); text-decoration:none; font-weight:750; overflow-wrap:anywhere; } .email:hover { color:white; background:#087a86; } .note { margin-top:24px; padding:18px 21px; border:1px solid #b8ded7; border-radius:15px; background:var(--soft); } .note p { margin:0; } .language { margin-top:54px; padding-top:42px; border-top:1px solid var(--line); } .language > h2 { margin-top:0; font-size:1.8rem; } .links { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:28px; } footer { border-top:1px solid var(--line); padding:22px 0 36px; color:var(--muted); font-size:.88rem; }
     @media(max-width:520px) { .wrap { width:min(100% - 28px,960px); } nav { gap:2px; } nav a { padding:6px 8px; font-size:.78rem; } .page-head,.content { border-radius:19px; } }
     @media(prefers-color-scheme:dark) { :root { --bg:#101b20; --panel:#18292e; --ink:#f1f8f7; --muted:#b5c9ca; --line:#365056; --soft:#1b3b40; } body { background:radial-gradient(circle at 88% 0%,#123d40 0,transparent 32rem),var(--bg); } .note { border-color:#275f62; } }
+    main > nav { margin-bottom:16px; }
   </style>
 </head>
 <body>
   <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="SanaTenge KZ — главная"><span class="brand-mark" aria-hidden="true">₸</span><span>SanaTenge KZ</span></a><nav aria-label="Навигация / Navigation"><a href="index.html">Главная / Home</a><a href="privacy-policy.html">Конфиденциальность / Privacy</a><a href="support.html" aria-current="page">Поддержка / Support</a><a href="terms.html">Условия / Terms</a></nav></div></header>
   <main class="wrap">
+    <nav aria-label="Тіл / Язык / Language">
+      <a href="#kk" lang="kk">Қазақша</a>
+      <a href="#ru" lang="ru">Русский</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
     <section id="ru" lang="ru" aria-labelledby="ru-title">
       <div class="page-head"><p class="eyebrow">Мы на связи</p><h1 id="ru-title">Поддержка SanaTenge KZ</h1><p>Поможем разобраться с приложением и вашими вопросами.</p></div>
       <div class="content">
@@ -31,11 +37,22 @@
         <ul><li>Модель iPhone или iPad, версию iOS и версию приложения.</li><li>На каком экране возникла проблема и какие действия вы выполнили.</li><li>Если вопрос связан с импортом, название банка и тип PDF-файла.</li></ul>
         <div class="note"><p><strong>Пожалуйста, берегите свои данные.</strong> Не прикладывайте выписки, номера карт, PIN-код или другие чувствительные сведения, если сами не решили ими поделиться.</p></div>
         <h2>Быстрые ответы</h2>
-        <p><strong>Какие выписки можно загрузить?</strong> Приложение работает с поддерживаемыми PDF-выписками Kaspi.kz, Halyk и Freedom Bank. Перед сохранением проверьте извлечённые строки и итоги.</p>
+        <p id="statements-ru"><strong>Какие выписки можно загрузить?</strong> Поддерживаются PDF-выписки Каспи (Kaspi Gold), Халыка и Фридом Банка, а также выписки Kaspi Pay и Евразийского банка в тенге. Перед сохранением проверьте извлечённые строки и итоги.</p>
+        <p><strong>Какой файл выбрать для Kaspi Pay?</strong> Загрузите полный PDF «Выписка по счету» в тенге из Kaspi Pay. Выписка Kaspi Gold распознаётся как отдельный формат.</p>
         <p><strong>Как исправить ручную операцию?</strong> Откройте «Операции», выберите добавленную вручную запись и измените нужные поля.</p>
         <p><strong>Что делать при совпадении с выпиской?</strong> На экране проверки импорта выберите «Заменить» или «Оставить обе» для каждого найденного совпадения.</p>
         <p><strong>Где экспорт CSV?</strong> Откройте «Настройки» → «Экспорт в CSV». Экспортируются и операции, добавленные вручную.</p>
         <p>Мы не имеем доступа к финансовым данным, которые хранятся в приложении на вашем устройстве.</p>
+        <h2 id="backups-ru">Резервные копии</h2>
+        <p>Чтобы автоматически сохранять историю в личном iCloud, подключите Pro и включите «Автоматическая копия в iCloud». На новом устройстве войдите в ту же учётную запись Apple, нажмите «Найти копии в iCloud» и выберите версию. При восстановлении текущий PIN сохраняется. Если PIN ещё не задан, его можно настроить позже.</p>
+        <p>Если ваша версия приложения поддерживает резервные копии в виде файлов, доступны следующие действия:</p>
+        <ol>
+          <li><strong>Создание.</strong> Откройте «Настройки» → «Резервные копии» → «Создать резервную копию». Введите и повторите пароль длиной 12–128 символов. Выберите место в «Файлах», например «На iPhone» или iCloud Drive.</li>
+          <li><strong>Восстановление.</strong> Нажмите «Восстановить из копии», выберите файл <code>.sanatengebackup</code> и введите его пароль. Проверьте дату и количество операций, затем подтвердите замену текущей истории.</li>
+        </ol>
+        <p>Чтобы вернуть предыдущую историю, выберите «Отменить восстановление», если эта кнопка доступна. Изменения, внесённые после восстановления, будут заменены.</p>
+        <p>Копия включает операции, историю импорта, категории и правила, бюджеты, цели, регулярные платежи и связи переводов. PIN приложения, исходные PDF и диагностические файлы в неё не входят.</p>
+        <p>Храните пароль отдельно от файла. Без пароля расшифровать копию невозможно. Для обращения в поддержку достаточно версии приложения и описания ошибки.</p>
       </div>
       <p class="links"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="terms.html">Условия использования</a></p>
     </section>
@@ -48,12 +65,53 @@
       <p>Please tell us your iPhone or iPad model, iOS version, app version, the screen where the issue occurred, and the steps you took. For import questions, include the bank and PDF type.</p>
       <div class="note"><p><strong>Protect your information.</strong> Do not attach statements, card numbers, your PIN, or other sensitive details unless you choose to share them.</p></div>
       <h2>Quick answers</h2>
-      <p><strong>Which statements can I import?</strong> Supported PDF statements from Kaspi.kz, Halyk, and Freedom Bank. Review extracted rows and totals before saving.</p>
+      <p id="statements-en"><strong>Which statements can I import?</strong> Supported PDF statements include Kaspi Gold, Halyk, and Freedom Bank, plus KZT statements from Kaspi Pay and Eurasian Bank. Review extracted rows and totals before saving.</p>
+      <p><strong>Which Kaspi Pay file should I choose?</strong> Import the complete KZT account statement PDF from Kaspi Pay. Kaspi Gold statements use a separate format.</p>
       <p><strong>Can I edit a manual transaction?</strong> Yes. Open Transactions, select the manually added entry, and update its fields.</p>
       <p><strong>What if an imported transaction matches a manual entry?</strong> During import review, choose Replace or Keep both for each match.</p>
       <p><strong>Where is CSV export?</strong> Open Settings → Export to CSV. Manual entries are included.</p>
       <p>We cannot access the financial data stored inside the app on your device.</p>
+      <h2 id="backups-en">Backups</h2>
+      <p>To back up your history to your private iCloud storage, subscribe to Pro and turn on Automatic iCloud backup. On a new device, sign in to the same Apple Account, tap Find iCloud backups, and choose a version. Restore preserves your current PIN. If you have no PIN yet, you can set one up later.</p>
+      <p>If your app version supports file-based backups, you can do the following:</p>
+      <ol>
+        <li><strong>Create a backup.</strong> Open Settings → Backups → Create a backup. Enter and confirm a 12–128 character password. Choose a location in Files, such as On My iPhone or iCloud Drive.</li>
+        <li><strong>Restore a backup.</strong> Tap Restore from a backup, select the <code>.sanatengebackup</code> file, and enter its password. Review the date and transaction count, then confirm replacing your current history.</li>
+      </ol>
+      <p>To recover the previous history, choose Undo restore if the option is available. This replaces any changes made since the restore.</p>
+      <p>The backup includes transactions, import history, categories and rules, budgets, goals, recurring payments, and transfer links. It excludes your app PIN, original PDFs, and diagnostic files.</p>
+      <p>Keep your password separate from the file. The backup cannot be decrypted without it. When contacting support, include your app version and describe the error.</p>
       <p class="links"><a href="privacy-policy.html#en">Privacy Policy</a><a href="terms.html#en">Terms of Use</a></p>
+    </section>
+    <section id="kk" lang="kk" class="content language" aria-labelledby="kk-title">
+      <h2 id="kk-title">SanaTenge KZ қолдауы</h2>
+      <p>PDF көшірмелерін импорттау, операцияларды қолмен енгізу, талдау немесе CSV-ға экспорттау бойынша көмек қажет болса, бізге жазыңыз.</p>
+      <a class="email" href="mailto:yekaterina.kim90@gmail.com?subject=SanaTenge%20KZ%20Support">yekaterina.kim90@gmail.com</a>
+      <h2>Хатта нені көрсету керек?</h2>
+      <ul>
+        <li>iPhone немесе iPad үлгісін, iOS пен қолданба нұсқаларын көрсетіңіз.</li>
+        <li>Мәселе қай экранда туындағанын және оған дейін қандай әрекет жасағаныңызды сипаттаңыз.</li>
+        <li>Импортқа қатысты сұрақ болса, банктің атауы мен PDF файлының түрін жазыңыз.</li>
+      </ul>
+      <div class="note"><p><strong>Деректеріңізді қорғаңыз.</strong> Бөлісуді өзіңіз қаламасаңыз, банк көшірмелерін, карта нөмірлерін, PIN-кодты немесе басқа құпия деректерді хатқа тіркемеңіз.</p></div>
+      <h2>Жиі қойылатын сұрақтар</h2>
+      <p id="statements-kk"><strong>Қандай көшірмелерді импорттауға болады?</strong> Kaspi Gold, Halyk және Freedom Bank PDF көшірмелеріне, сондай-ақ Kaspi Pay мен Еуразиялық банктің теңгедегі көшірмелеріне қолдау көрсетіледі. Сақтамас бұрын оқылған жолдар мен қорытынды сомаларды тексеріңіз.</p>
+      <p><strong>Kaspi Pay үшін қай файлды таңдау керек?</strong> Kaspi Pay-ден алынған теңгедегі шот көшірмесінің толық PDF файлын («Выписка по счету») жүктеңіз. Kaspi Gold көшірмесі бөлек формат ретінде танылады.</p>
+      <p><strong>Қолмен енгізілген операцияны қалай түзетемін?</strong> «Операциялар» бөлімін ашып, қолмен қосылған жазбаны таңдаңыз да, қажетті өрістерді өзгертіңіз.</p>
+      <p><strong>Көшірмедегі операция қолмен енгізілген жазбамен сәйкес келсе не істеймін?</strong> Импортты тексеру экранында әр сәйкестік үшін «Ауыстыру» немесе «Екеуін қалдыру» әрекетін таңдаңыз.</p>
+      <p><strong>CSV-ға қалай экспорттаймын?</strong> «Баптаулар» → «CSV-ға экспорт» тармағын ашыңыз. Қолмен қосылған операциялар да экспортталады.</p>
+      <p>Құрылғыңыздағы қолданбада сақталған қаржы деректеріне біздің қол жеткізу мүмкіндігіміз жоқ.</p>
+      <h2 id="backups-kk">Сақтық көшірмелер</h2>
+      <p>Қаржы тарихын жеке iCloud қоймасына автоматты түрде сақтау үшін Pro жазылымын қосып, «iCloud-тағы автоматты сақтық көшірме» параметрін қосыңыз. Жаңа құрылғыда сол Apple тіркелгісіне кіріп, «iCloud-тан көшірмелерді табу» тармағын басыңыз да, нұсқаны таңдаңыз. Қалпына келтіргенде қазіргі PIN-код сақталады. PIN-код орнатылмаған болса, оны кейін орнатуға болады.</p>
+      <p>Қолданба нұсқаңызда сақтық көшірмені файл түрінде жасау және ашу қолжетімді болса, мына әрекеттерді орындауға болады.</p>
+      <ol>
+        <li><strong>Көшірме жасау.</strong> «Баптаулар» → «Сақтық көшірмелер» → «Сақтық көшірме жасау» тармағын ашыңыз. 12–128 таңбадан тұратын құпиясөзді енгізіп, оны қайталаңыз. «Файлдар» қолданбасынан сақтау орнын таңдаңыз, мысалы, iPhone жадын немесе iCloud Drive-ты.</li>
+        <li><strong>Көшірмеден қалпына келтіру.</strong> «Көшірмеден қалпына келтіру» тармағын басып, <code>.sanatengebackup</code> файлын таңдаңыз да, құпиясөзін енгізіңіз. Көшірме күні мен операциялар санын тексеріп, ағымдағы тарихты ауыстыруды растаңыз.</li>
+      </ol>
+      <p>Алдыңғы тарихты қайтару үшін, батырма қолжетімді болса, «Қалпына келтіруден бас тарту» тармағын таңдаңыз. Бұл қалпына келтіргеннен кейінгі өзгерістерді ауыстырады.</p>
+      <p>Көшірмеге операциялар, импорт тарихы, санаттар мен ережелер, бюджеттер, мақсаттар, тұрақты төлемдер және аударымдар арасындағы байланыстар кіреді. Қолданбаның PIN-коды, бастапқы PDF файлдары және диагностика файлдары көшірмеге кірмейді.</p>
+      <p>Құпиясөзді файлдан бөлек сақтаңыз. Құпиясөзсіз көшірменің шифрын ашу мүмкін емес. Қолдау қызметіне хабарласқанда қолданба нұсқасын көрсетіп, қатені сипаттаңыз.</p>
+      <p class="links"><a href="index.html#kk">Басты бет</a><a href="privacy-policy.html#kk">Құпиялылық саясаты</a><a href="terms.html#kk">Пайдалану шарттары</a></p>
     </section>
   </main>
   <footer><div class="wrap">© 2026 SanaTenge KZ · <a href="index.html">Home / Главная</a></div></footer>

@@ -17,28 +17,40 @@
     .content { margin-top:20px; padding:clamp(23px,4vw,44px); border:1px solid var(--line); border-radius:22px; background:var(--panel); } .content h2 { margin:29px 0 7px; font-size:1.22rem; line-height:1.3; } .content h2:first-of-type { margin-top:20px; } .content p { margin:0 0 14px; color:var(--muted); } .content li { color:var(--muted); } .content ul { padding-left:1.3rem; } .date { font-size:.88rem; font-weight:650; } .language { margin-top:54px; padding-top:42px; border-top:1px solid var(--line); } .language > h2 { margin-top:0; font-size:1.8rem; } .links { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:28px; } footer { border-top:1px solid var(--line); padding:22px 0 36px; color:var(--muted); font-size:.88rem; }
     @media(max-width:520px) { .wrap { width:min(100% - 28px,960px); } nav { gap:2px; } nav a { padding:6px 8px; font-size:.78rem; } .page-head,.content { border-radius:19px; } }
     @media(prefers-color-scheme:dark) { :root { --bg:#101b20; --panel:#18292e; --ink:#f1f8f7; --muted:#b5c9ca; --line:#365056; --soft:#1b3b40; } body { background:radial-gradient(circle at 88% 0%,#123d40 0,transparent 32rem),var(--bg); } }
+    main > nav { margin-bottom:16px; }
   </style>
 </head>
 <body>
   <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="SanaTenge KZ — главная"><span class="brand-mark" aria-hidden="true">₸</span><span>SanaTenge KZ</span></a><nav aria-label="Навигация / Navigation"><a href="index.html">Главная / Home</a><a href="privacy-policy.html" aria-current="page">Конфиденциальность / Privacy</a><a href="support.html">Поддержка / Support</a><a href="terms.html">Условия / Terms</a></nav></div></header>
   <main class="wrap">
+    <nav aria-label="Тіл / Язык / Language">
+      <a href="#kk" lang="kk">Қазақша</a>
+      <a href="#ru" lang="ru">Русский</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
     <section id="ru" lang="ru" aria-labelledby="ru-title">
       <div class="page-head"><p class="eyebrow">SanaTenge KZ</p><h1 id="ru-title">Политика конфиденциальности</h1><p>Ваши финансовые записи остаются под вашим контролем.</p></div>
       <div class="content">
-        <p class="date">Дата вступления в силу: 24 сентября 2026 года.</p>
+        <p class="date">Дата редакции: 24 ноября 2026 года.</p>
         <p>SanaTenge KZ — приложение для личного учёта финансов. Учётная запись для его использования не требуется.</p>
 
         <h2>Данные на устройстве</h2>
         <p>Импортированные PDF-выписки, извлечённые операции, записи, добавленные вручную, категории, правила, аналитика, PIN-код и настройки обрабатываются и хранятся на вашем устройстве. Мы не получаем копии ваших выписок и операций и не загружаем их на наши серверы. В приложении нет сторонних SDK аналитики или рекламы.</p>
 
+        <h2>Подписки и лимит импортов</h2>
+        <p>Покупки и подписки обрабатываются Apple через App Store. Приложение получает проверенные сведения о продукте и праве доступа через StoreKit; мы не получаем реквизиты вашей платёжной карты. Финансовые выписки и операции не отправляются для проверки подписки. Для соблюдения бесплатного лимита на устройстве в Keychain и локальных настройках хранятся технические идентификаторы успешных импортов и количество бесплатных экспортов в CSV. Эти сведения не содержат ФИО, номеров счетов или текста выписки и сохраняются при очистке финансовой истории. Статус Pro не переносится в финансовой резервной копии и проверяется через Apple.</p>
+
         <h2>Запросы курсов валют и золота</h2>
         <p>Для отображения курсов приложение обращается к публичным источникам: Национальному Банку Казахстана и Stooq. Запросы не содержат ваши банковские выписки, операции или категории. Как и при любом сетевом обращении, эти источники могут получать технические сведения о соединении, например IP-адрес, согласно собственным правилам.</p>
 
         <h2>Доступ к файлам и защита</h2>
-        <p>Вы сами выбираете PDF-файл для импорта через системный интерфейс iOS. PIN-код используется для ограничения доступа к приложению, если вы включили эту функцию. Приложение не запрашивает доступ к вашим банковским аккаунтам.</p>
+        <p>Вы сами выбираете PDF-файл для импорта через системный интерфейс iOS. Это касается всех <a href="support.html#statements-ru">поддерживаемых форматов</a>, включая выписки Kaspi Pay и Евразийского банка в тенге. PIN-код используется для ограничения доступа к приложению, если вы включили эту функцию. Приложение не запрашивает доступ к вашим банковским аккаунтам.</p>
 
         <h2>Экспорт, резервные копии и удаление</h2>
-        <p>CSV создаётся локально. Данные покидают приложение, только когда вы сами экспортируете или передаёте файл. Сохранённые вне приложения копии находятся в выбранном вами месте. Резервные копии устройства могут включать данные приложения в зависимости от ваших настроек Apple. Функция «Очистка» удаляет локально сохранённые финансовые данные приложения; ранее экспортированные файлы и резервные копии нужно удалять отдельно.</p>
+        <p>CSV и резервные копии создаются на устройстве по вашему запросу. Приложение шифрует резервную копию выбранным вами паролем. Вы выбираете, где сохранить файл, в том числе в iCloud Drive. Мы не получаем файл или пароль. Для восстановления нужны файл и его пароль. PIN приложения в экспортированную копию не входит. При восстановлении текущий PIN сохраняется. На устройстве без PIN его можно настроить отдельно; PIN из копии не переносится. Отдельно от этого системная копия устройства может включать данные приложения в зависимости от настроек Apple. «Очистка» удаляет локальную историю, включая копию для отмены восстановления. Экспортированные файлы и системные копии удаляются отдельно.</p>
+
+        <h2>Автоматические копии в iCloud</h2>
+        <p>Если вы включите автоматические копии, приложение будет сохранять снимки финансовой истории и настроек учёта в приватном хранилище CloudKit вашей учётной записи Apple. CloudKit шифрует файлы копий. PIN, его хеш и исходные PDF в копии не входят. Приложение хранит до двух версий. Отключение останавливает новые загрузки, а сохранённые копии можно удалить отдельно в разделе «Резервные копии». Данные на устройстве при удалении облачных копий сохраняются.</p>
 
         <h2>Обращения в поддержку</h2>
         <p>Если вы пишете нам по электронной почте, мы используем адрес и содержание письма для ответа. Пожалуйста, не отправляйте выписки, номера карт и другие чувствительные данные, если сами не решили ими поделиться.</p>
@@ -51,20 +63,26 @@
 
     <section id="en" lang="en" class="content language" aria-labelledby="en-title">
       <h2 id="en-title">Privacy Policy</h2>
-      <p class="date">Effective September 24, 2026.</p>
+      <p class="date">Revised November 24, 2026.</p>
       <p>SanaTenge KZ is a personal finance app. No account is required to use it.</p>
 
       <h2>Data on your device</h2>
       <p>Imported PDF statements, extracted transactions, manual entries, categories, rules, insights, your PIN, and settings are processed and stored on your device. We do not receive copies of your statements or transactions and do not upload them to our servers. The app does not include third-party analytics or advertising SDKs.</p>
 
+      <h2>Subscriptions and import allowance</h2>
+      <p>Apple processes purchases and subscriptions through the App Store. The app obtains verified product and entitlement information through StoreKit; we do not receive your payment card details. Financial statements and transactions are not sent to verify your subscription. To enforce the free allowance, the device stores technical identifiers for successful imports and a count of free CSV exports in Keychain and local preferences. These records contain no names, account numbers, or statement text and are retained when financial history is cleared. Pro status is not transferred in financial backups and is verified through Apple.</p>
+
       <h2>Exchange rate and gold price requests</h2>
       <p>The app requests public rates from the National Bank of Kazakhstan and Stooq. These requests do not include your bank statements, transactions, or categories. Like any network service, these providers may receive technical connection information such as your IP address under their own policies.</p>
 
       <h2>File access and security</h2>
-      <p>You choose which PDF to import through the iOS file picker. You can enable a PIN to restrict access to the app. The app does not request access to your bank accounts.</p>
+      <p>You choose which PDF to import through the iOS file picker. This applies to all <a href="support.html#statements-en">supported formats</a>, including KZT statements from Kaspi Pay and Eurasian Bank. You can enable a PIN to restrict access to the app. The app does not request access to your bank accounts.</p>
 
       <h2>Export, backups, and deletion</h2>
-      <p>CSV files are created locally. Data leaves the app only when you choose to export or share a file. Copies saved elsewhere remain at the destination you selected. Device backups may include app data depending on your Apple settings. The in-app Cleanup feature deletes locally saved financial data; exported files and backups must be removed separately.</p>
+      <p>CSV files and backups are created on your device when you request them. The app encrypts backups with a password you choose. You select where to save the file, including iCloud Drive. We do not receive the file or its password. You need both the file and its password to restore. The exported backup excludes the app PIN. Restore keeps the current device PIN; on a device without one, you can set it up separately. Separately, system device backups may include app data depending on your Apple settings. Cleanup deletes local history, including the copy kept to undo a restore. Exported files and system backups are deleted separately.</p>
+
+      <h2>Automatic iCloud backups</h2>
+      <p>If you enable automatic backups, the app saves snapshots of your financial history and accounting settings to the private CloudKit storage of your Apple Account. CloudKit encrypts the backup files. The snapshots exclude your PIN, its hash, and original PDFs. The app keeps up to two versions. Turning off backups stops new uploads. You can delete copies separately in Backups and keep your local history.</p>
 
       <h2>Support messages</h2>
       <p>If you email us, we use your address and message to reply. Please do not send statements, card numbers, or other sensitive information unless you choose to share them.</p>
@@ -72,6 +90,36 @@
       <h2>This website and contact</h2>
       <p>These pages are hosted on GitHub Pages. GitHub may process technical information about visits under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. For SanaTenge KZ questions, email <a href="mailto:yekaterina.kim90@gmail.com?subject=SanaTenge%20KZ%20Privacy">yekaterina.kim90@gmail.com</a>.</p>
       <p class="links"><a href="index.html#en">Home</a><a href="support.html#en">Support</a><a href="terms.html#en">Terms of Use</a></p>
+    </section>
+    <section id="kk" lang="kk" class="content language" aria-labelledby="kk-title">
+      <h2 id="kk-title">Құпиялылық саясаты</h2>
+      <p class="date">Редакция күні: 2026 жылғы 24 қараша.</p>
+      <p>SanaTenge KZ жеке қаржыны есепке алуға арналған. Қолданбаны пайдалану үшін тіркелгі қажет емес.</p>
+
+      <h2>Құрылғыңыздағы деректер</h2>
+      <p>Импортталған PDF көшірмелері, олардан алынған операциялар, қолмен қосылған жазбалар, санаттар, ережелер, талдау деректері, PIN-код және баптаулар құрылғыңызда өңделіп, сақталады. Біз банк көшірмелеріңізді немесе операцияларыңызды алмаймыз және оларды өз серверімізге жүктемейміз. Қолданбада үшінші тараптың талдау немесе жарнама SDK-лары жоқ.</p>
+
+      <h2>Жазылымдар және импорт лимиті</h2>
+      <p>Сатып алулар мен жазылымдарды Apple App Store арқылы өңдейді. Қолданба StoreKit арқылы өнім және оған қол жеткізу құқығы туралы расталған ақпаратты алады. Біз төлем картаңыздың деректемелерін алмаймыз. Жазылымды тексеру үшін банк көшірмелері мен операциялар жіберілмейді. Тегін лимитті есептеу үшін сәтті импорттардың техникалық идентификаторлары мен тегін CSV экспорттарының саны құрылғыдағы Keychain қоймасында және жергілікті баптауларда сақталады. Бұл деректерге аты-жөніңіз, шот нөмірлері және банк көшірмесінің мәтіні кірмейді. Қаржы тарихын тазалаған кезде бұл есеп деректері сақталады. Pro мәртебесі қаржы деректерінің сақтық көшірмесіне кірмейді және Apple арқылы тексеріледі.</p>
+
+      <h2>Валюта бағамдары мен алтын бағасына сұраулар</h2>
+      <p>Бағамдарды көрсету үшін қолданба Қазақстан Ұлттық Банкі мен Stooq ашық дереккөздеріне сұрау жібереді. Сұрауларда банк көшірмелері, операциялар немесе санаттар болмайды. Кез келген желілік сұраудағыдай, бұл дереккөздер өз ережелеріне сәйкес IP мекенжайы сияқты техникалық байланыс деректерін алуы мүмкін.</p>
+
+      <h2>Файлдарға қол жеткізу және қорғау</h2>
+      <p>Импортталатын PDF файлын iOS жүйесіндегі файл таңдау терезесі арқылы өзіңіз таңдайсыз. Бұл Kaspi Pay мен Еуразиялық банктің теңгедегі көшірмелерін қоса алғанда, барлық <a href="support.html#statements-kk">қолдау көрсетілетін форматтарға</a> қатысты. Қолданбаға кіруді шектеу үшін PIN-код орната аласыз. Қолданба банк шоттарыңызға қол жеткізуді сұрамайды.</p>
+
+      <h2>Экспорт, сақтық көшірмелер және жою</h2>
+      <p>CSV файлдары мен сақтық көшірмелер сұрауыңыз бойынша құрылғыда жасалады. Қолданба сақтық көшірмені өзіңіз таңдаған құпиясөзбен шифрлайды. Файлды қайда сақтайтыныңызды өзіңіз шешесіз, мысалы, iCloud Drive-ты таңдай аласыз. Біз файлды да, оның құпиясөзін де алмаймыз. Қалпына келтіру үшін файл мен құпиясөз қажет. Экспортталған көшірмеде қолданбаның PIN-коды болмайды. Қалпына келтіргенде құрылғыдағы қазіргі PIN-код сақталады. PIN-код әлі орнатылмаған болса, оны бөлек орнатуға болады. Apple баптауларына байланысты құрылғының жүйелік сақтық көшірмесіне қолданба деректері кіруі мүмкін. «Тазалау» жергілікті тарихты және қалпына келтіруді қайтару үшін сақталған көшірмені жояды. Экспортталған файлдар мен жүйелік сақтық көшірмелер бөлек жойылады.</p>
+
+      <h2>iCloud-тағы автоматты сақтық көшірмелер</h2>
+      <p>Автоматты сақтық көшірмені қоссаңыз, қолданба қаржы тарихы мен есепке алу баптауларының көшірмелерін Apple тіркелгіңіздің жеке CloudKit қоймасына сақтайды. CloudKit көшірме файлдарын шифрлайды. Көшірмелерге PIN-код, оның хэші және бастапқы PDF файлдары кірмейді. Қолданба екі нұсқаға дейін сақтайды. Автоматты көшіруді өшіргенде жаңа көшірмелер жүктелмейді. Сақталған көшірмелерді «Сақтық көшірмелер» бөлімінен бөлек жоюға болады. Бұл құрылғыдағы қаржы тарихына әсер етпейді.</p>
+
+      <h2>Қолдау қызметіне хабарласу</h2>
+      <p>Бізге электрондық пошта арқылы жазсаңыз, жауап беру үшін мекенжайыңыз бен хатыңыздың мазмұнын пайдаланамыз. Бөлісуді өзіңіз қаламасаңыз, банк көшірмелерін, карта нөмірлерін немесе басқа құпия деректерді жібермеңіз.</p>
+
+      <h2>Осы сайт және байланыс</h2>
+      <p>Бұл беттер GitHub Pages платформасында орналастырылған. GitHub сайтқа кіру туралы техникалық деректерді өзінің <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">құпиялылық саясатына</a> сәйкес өңдеуі мүмкін. SanaTenge KZ туралы сұрақтарыңыз болса, <a href="mailto:yekaterina.kim90@gmail.com?subject=SanaTenge%20KZ%20Privacy">yekaterina.kim90@gmail.com</a> мекенжайына жазыңыз.</p>
+      <p class="links"><a href="index.html#kk">Басты бет</a><a href="support.html#kk">Қолдау</a><a href="terms.html#kk">Пайдалану шарттары</a></p>
     </section>
   </main>
   <footer><div class="wrap">© 2026 SanaTenge KZ · <a href="support.html">Contact / Связаться</a></div></footer>
